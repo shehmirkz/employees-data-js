@@ -21,7 +21,7 @@ let employeesData = [
     }
 ];
 
-    //i cretaed a function renderEmployeeTable with two parameters 1: items & 2: elementID//
+    //i cretaed a function renderEmployeeTable with two parameters 1: items & 2: elementID for Dynamic behavior//
 let renderEmployeeTable = (items, elementsId) => {
 
 
@@ -54,9 +54,9 @@ items.forEach((employee, indexCount) => {
     if(indexCount === 0) {
         for(let key in employee) {
             console.log(`${key}: ${employee[key]}`)
-            let tableHeading = document.createElement('th')
-            tableHeading.innerText = key.toUpperCase();
-            tableHead.appendChild(tableHeading);
+            this.tableHeading = document.createElement('th')
+            this.tableHeading.innerText = key.toUpperCase();
+            this.tableHead.appendChild(this.tableHeading);
         }
     }
 
@@ -114,12 +114,15 @@ let employeesForm = document.getElementById('employeesForm');
     employeesForm.addEventListener('submit', (event) => {
 
         event.preventDefault();
+        //Here i stored values into Variables which get from input fields of form//
 
         let fullName = document.getElementById('fullName').value
         let surname = document.getElementById('surname').value
         let designation = document.getElementById('designation').value
         let address = document.getElementById('address').value
         let indexStrength = document.getElementById('hiddenIndex').value
+
+        //Here i store all above variables into one variable as object in  {} curly braces//
 
         let formItems = {fullName, surname, designation, address};
         console.log(formItems);
