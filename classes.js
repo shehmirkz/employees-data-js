@@ -98,5 +98,4 @@ class DataTabel {
 }
 
 
-let dataTabel = new DataTabel(workersData, 'workersId');
-dataTabel.buttonTd;
+// let dataTabel = new DataTabel(workersData, 'workersId');
